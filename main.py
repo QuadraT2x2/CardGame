@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from class_mapping import my_dict
 
 app = Flask(__name__)
 
@@ -36,10 +37,17 @@ def choose():
 def fight():
     #print(request.form)
     #print(request.args)
-    print(request.args['fighter_1'])
-    print(request.args['fighter_2'])
+    #print(request.args['fighter_1'])
+    #print(request.args['fighter_2'])
+    class1 = request.args['fighter_1']
+    class2 = request.args['fighter_2']
+    html_name = my_dict[class1] + '_vs_' + my_dict[class2] + '.html'
+    #print(html_name)
+
     if 'fighter_1' and 'fighter_2' in request.args.keys() and request.args['fighter_1'] != '' and request.args['fighter_2'] != '':
-        if request.args['fighter_1'] == 'mage':
+        return render_template(html_name)
+        '''if request.args['fighter_1'] == 'mage':
+
             if request.args['fighter_2'] == 'mage':
                 return render_template("m_vs_m.html")
 
@@ -51,6 +59,7 @@ def fight():
 
 
         if request.args['fighter_1'] == 'warrior':
+
             if request.args['fighter_2'] == 'mage':
                 return render_template("w_vs_m.html")
 
@@ -62,6 +71,7 @@ def fight():
 
 
         if request.args['fighter_1'] == 'knight':
+
             if request.args['fighter_2'] == 'mage':
                 return render_template("k_vs_m.html")
 
@@ -69,7 +79,7 @@ def fight():
                 return render_template("k_vs_w.html")
                 
             if request.args['fighter_2'] == 'knight':
-                return render_template("k_vs_k.html")
+                return render_template("k_vs_k.html")'''
     else:
         return render_template("fight.html")
     
