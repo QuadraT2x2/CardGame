@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Cards</title>
+</head>
+<body>
+
+<div>
+    <section>
+        
+        <article>
+          <p><img src="{{url_for('static', filename='mage.png')}}" alt="foto_1" width="500" height="650"></p>
+        </article>
+  
+        <article>
+  
+          <p><img src="{{url_for('static', filename='warrior.png')}}" alt="foto_2" width="500" height="650"></p>
+        </article>
+  
+        <article>
+  
+          <p><img src="{{url_for('static', filename='knight.png')}}" alt="foto_3" width="500" height="650"></p>
+        
+        </article>
+      </section>
+</div>
+
+
+<form action="" method="GET">
+    <label for="number">Choose card №:</label>
+    <input id="number" type="number" name="number">
+    <input type="submit" value="Enter">
+  </form>
+
+</body>
+</html>

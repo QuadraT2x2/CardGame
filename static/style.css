@@ -1,0 +1,55 @@
+body {
+background: rgba(233, 122, 18, 0.849);
+
+font-size: 15px;
+color: rgb(0, 0, 0);
+line-height: 1.6;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-width: 1200px;
+    margin: 0 auto;
+    color: yellow;
+    ;;
+}
+
+.pozhar {
+    background-color: red
+    ;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
