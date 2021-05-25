@@ -44,7 +44,7 @@ def fight():
         class1 = request.args['fighter_1']
         class2 = request.args['fighter_2']
         html_name = my_dict[class1] + '_vs_' + my_dict[class2] + '.html'
-        return render_template(html_name)
+        return render_template('fight.html', class1 = class1, class2 = class2)
 
     else:
         return render_template("fight.html")
